@@ -1,0 +1,42 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2020: true,
+    node: true,
+  },
+  extends: [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:functional/recommended",
+    "plugin:perfectionist/recommended-natural",
+    "eslint-config-prettier",
+  ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: { ecmaVersion: "latest", sourceType: "module" },
+  plugins: [
+    "react",
+    "react-refresh",
+    "functional",
+    "perfectionist",
+  ],
+  rules: {
+    "functional/functional-parameters": 0,
+    "functional/immutable-data": 0,
+    "functional/no-conditional-statements": 0,
+    "functional/no-expression-statements": 0,
+    "functional/no-throw-statement": 0,
+    "functional/no-try-statement": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "no-console": "warn",
+    "no-underscore-dangle": [2, { allow: ["__filename", "__dirname"] }],
+    "react/function-component-definition": [
+      2,
+      { namedComponents: "arrow-function" },
+    ],
+    "react/jsx-filename-extension": [1, { extensions: [".tsx"] }],
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "react-refresh/only-export-components": "warn",
+  },
+};
