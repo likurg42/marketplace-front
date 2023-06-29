@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     'airbnb',
     'airbnb/hooks',
+    'plugin:react/recommended',
     'plugin:functional/recommended',
     'plugin:perfectionist/recommended-natural',
     'eslint-config-prettier',
@@ -15,6 +16,7 @@ module.exports = {
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   plugins: ['react', 'react-refresh', 'functional', 'perfectionist'],
   rules: {
+    'functional/prefer-immutable-types': 0,
     'functional/functional-parameters': 0,
     'functional/immutable-data': 0,
     'functional/no-conditional-statements': 0,
