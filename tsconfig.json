@@ -5,15 +5,14 @@
     "lib": ["ES2015", "ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
     /* Bundler mode */
-    "moduleResolution": "NodeNext",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -23,11 +22,21 @@
     "paths": {
       "@components/*": ["components/*"],
       "@features/*": ["features/*"],
+      "@features": ["features/index.ts"],
       "@pages/*": ["pages/*"],
+      "@pages": ["pages/index.ts"],
       "@routes/*": ["routes/*"],
-      "@store/*": ["store/*"]
+      "@routes": ["routes/index.ts"],
+      "@store/*": ["store/*"],
+      "@store": ["store/index.ts"],
+      "@styles/*": ["styles/*"],
+      "@styles": ["styles/index.ts"]
     }
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

@@ -1,9 +1,9 @@
 import { lazy } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
-import { checkPathMatch, paths } from '@routes/routes-helpers';
+import { checkPathMatch, paths } from '@routes/routes-helpers.ts';
 
-const HomePage = lazy(() => import('@pages/HomePage/index.ts'));
+const HomePage = lazy(() => import('@pages/HomePage'));
 
 const PublicRoutes = () => {
   const location = useLocation();

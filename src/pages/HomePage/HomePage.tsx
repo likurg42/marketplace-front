@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-import TestDiv from '@pages/HomePage/styled';
+import TestDiv from '@pages/HomePage/styled.ts';
 
 const HomePage = () => (
   <>

@@ -1,11 +1,9 @@
 import { lazy } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
-import { checkPathMatch, paths } from '@routes/routes-helpers';
+import { checkPathMatch, paths } from '@routes/routes-helpers.ts';
 
-const AccountSettingsPage = lazy(
-  () => import('@pages/AccountSettingsPage/index.ts')
-);
+const AccountSettingsPage = lazy(() => import('@pages/AccountSettingsPage'));
 
 const PrivateRoutes = () => {
   const location = useLocation();
