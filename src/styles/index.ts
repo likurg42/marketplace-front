@@ -1,4 +1,5 @@
-import GlobalStyles from '@styles/global-styles.tsx';
-import BaseTheme from '@styles/themes/base-theme.ts';
+import GlobalStyled from '@styles/global-styled';
+import BaseTheme, { BreakpointsValues } from '@styles/themes/base-theme';
 
-export { BaseTheme, GlobalStyles };
+export { BaseTheme, GlobalStyled };
+export type { BreakpointsValues };

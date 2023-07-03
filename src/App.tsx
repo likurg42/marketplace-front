@@ -1,27 +1,27 @@
 import { Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
+import { PrivateRoutes, PublicRoutes } from '@routes';
+import { BaseTheme, GlobalStyled } from '@styles';
 import { ThemeProvider } from 'styled-components';
 
 import Footer from '@features/Footer';
 import Header from '@features/Header';
-import { PrivateRoutes, PublicRoutes } from '@routes';
-import { BaseTheme, GlobalStyles } from '@styles';
-import PageWrapper from '@styles/app-styled.ts';
+import FullHeightWrapper from '@styles/app-styled';
 
 const App = () => (
   <>
-    <GlobalStyles />
+    <GlobalStyled />
     <ThemeProvider theme={BaseTheme}>
       <BrowserRouter>
-        <PageWrapper>
+        <FullHeightWrapper>
           <Header />
           <Suspense fallback="...loading">
             <PrivateRoutes />
             <PublicRoutes />
           </Suspense>
           <Footer />
-        </PageWrapper>
+        </FullHeightWrapper>
       </BrowserRouter>
     </ThemeProvider>
   </>

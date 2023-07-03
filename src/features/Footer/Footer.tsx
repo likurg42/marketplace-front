@@ -1,4 +1,4 @@
-import * as S from '@features/Footer/footer-styled.ts';
+import * as S from '@features/Footer/footer-styled';
 
 const Footer = () => (
   <S.Wrapper>

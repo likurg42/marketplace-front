@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
-import { checkPathMatch, paths } from '@routes/routes-helpers.ts';
+import { checkPathMatch, paths } from '@routes/routes-helpers';
 
 const AccountSettingsPage = lazy(() => import('@pages/AccountSettingsPage'));
 

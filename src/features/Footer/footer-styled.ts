@@ -6,7 +6,7 @@ export const About = styled.div`
 
 export const Wrapper = styled.footer`
   padding: 10px 20px;
-  height: ${({ theme }) => theme.sizes.footerHeight}
+  height: ${({ theme }) => theme.sizes.footerHeight};
   display: flex;
   justify-content: space-between;
 

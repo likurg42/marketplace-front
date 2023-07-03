@@ -1,3 +1,3 @@
-import Footer from '@features/Footer/Footer.tsx';
+import Footer from '@features/Footer/Footer';
 
 export default Footer;

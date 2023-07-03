@@ -1,4 +1,4 @@
-import { Theme } from '@styles/themes/base-theme.ts';
+import { Theme } from '@styles/themes/base-theme';
 
 import 'styled-components';
 

@@ -1,4 +1,4 @@
-import Wrapper from '@features/Header/header-styled.ts';
+import Wrapper from '@features/Header/header-styled';
 
 const Header = () => (
   <Wrapper>
