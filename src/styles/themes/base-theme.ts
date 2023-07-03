@@ -6,6 +6,8 @@ const breakpoints = {
   xxl: '1536px',
 };
 
+type MediaString = string;
+
 export type BreakpointsValues = keyof typeof breakpoints;
 
 const BaseTheme = {
@@ -17,13 +19,12 @@ const BaseTheme = {
   durations: {
     ms1000: 1000,
   },
-  media: Object.entries(breakpoints).reduce<{ [key: string]: string }>(
-    (acc, [key, value]) => {
-      acc[key] = `(min-width: ${value})`;
-      return acc;
-    },
-    {}
-  ),
+  media: (
+    Object.entries(breakpoints) as [keyof typeof breakpoints, string][]
+  ).reduce((acc, [key, value]) => {
+    acc[key] = `(min-width: ${value})`;
+    return acc;
+  }, {} as { [value in keyof typeof breakpoints]: MediaString }),
   order: {
     level1: 1,
     level2: 10,
@@ -37,8 +38,6 @@ const BaseTheme = {
   },
 };
 
-export type Theme = typeof BaseTheme & {
-  media: typeof breakpoints;
-};
+export type Theme = typeof BaseTheme;
 
 export default BaseTheme;

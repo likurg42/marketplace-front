@@ -9,6 +9,7 @@ module.exports = {
     "airbnb/hooks",
     "plugin:functional/recommended",
     "plugin:perfectionist/recommended-natural",
+    "plugin:@typescript-eslint/recommended",
     "eslint-config-prettier",
   ],
   parser: "@typescript-eslint/parser",
@@ -21,6 +22,7 @@ module.exports = {
     "perfectionist",
   ],
   rules: {
+    "@typescript-eslint/no-unused-vars": "error",
     "functional/prefer-immutable-types": 0,
     "functional/functional-parameters": 0,
     "functional/immutable-data": 0,
