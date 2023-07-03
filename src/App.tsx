@@ -3,21 +3,25 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { ThemeProvider } from 'styled-components';
 
+import Footer from '@features/Footer';
+import Header from '@features/Header';
 import { PrivateRoutes, PublicRoutes } from '@routes';
 import { BaseTheme, GlobalStyles } from '@styles';
-
-const NewComponent = () => <h1>New Component</h1>;
+import PageWrapper from '@styles/app-styled.ts';
 
 const App = () => (
   <>
     <GlobalStyles />
     <ThemeProvider theme={BaseTheme}>
       <BrowserRouter>
-        <Suspense fallback="...loading">
-          <PrivateRoutes />
-          <PublicRoutes />
-        </Suspense>
-        <NewComponent />
+        <PageWrapper>
+          <Header />
+          <Suspense fallback="...loading">
+            <PrivateRoutes />
+            <PublicRoutes />
+          </Suspense>
+          <Footer />
+        </PageWrapper>
       </BrowserRouter>
     </ThemeProvider>
   </>
